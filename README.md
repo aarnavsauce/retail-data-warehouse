@@ -1,5 +1,8 @@
 # Enterprise Retail Data Warehouse & BI Architecture
 
+## Dataset Link
+https://www.kaggle.com/datasets/datarspectrum/retail-data-warehouse-12-table-1m-rows-dataset
+
 ## Overview
 This project models an enterprise retail data warehouse in PostgreSQL using Kimball Star Schema architecture. It transforms raw transactional data into conformed dimensions and multi-grain fact tables for executive analytics.
 
