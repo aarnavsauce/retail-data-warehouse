@@ -1,4 +1,4 @@
--- Analytics query to calculate Monthly Revenue, Wholesale Cost Margin & 3-Month Average
+-- Query 1 - Analytics query to calculate Monthly Revenue, Wholesale Cost Margin & 3-Month Average
 
 WITH monthly_financials AS (
     SELECT 
