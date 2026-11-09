@@ -27,7 +27,8 @@ CREATE TABLE dim_product (
     product_id INT UNIQUE,
     category_name VARCHAR(100),
     supplier_country VARCHAR(100),
-    wholesale_price NUMERIC(10, 2)
+    retail_list_price NUMERIC(10, 2),
+    wholesale_cost NUMERIC(10, 2)
 );
 
 
@@ -64,7 +65,9 @@ CREATE TABLE fact_sales (
     discount_amount NUMERIC(10, 2),
     net_revenue NUMERIC(10, 2),
     refund_amount NUMERIC(10, 2),
-    final_revenue NUMERIC(10, 2)
+    final_revenue NUMERIC(10, 2),
+    cost_amount NUMERIC(10, 2),
+    net_profit NUMERIC(10, 2)
 );
 
 

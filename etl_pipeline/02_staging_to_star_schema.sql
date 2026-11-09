@@ -18,13 +18,16 @@ INSERT INTO dim_customer (customer_id, city, signup_date)
 SELECT DISTINCT customer_id, city, signup_date::DATE
 FROM staging_customers;
 
--- Populate dim_product
+-- Populate dim_product 
+-- BUSINESS RULE ASSUMPTION: 
+-- Raw dataset lacks explicit wholesale cost column.
+-- Applying standard retail COGS model (60% of retail list price) to estimate wholesale cost.
 INSERT INTO dim_product (product_id, category_name, supplier_country, wholesale_price)
 SELECT 
     p.product_id,
     c.category_name,
     s.country AS supplier_country,
-    p.price AS wholesale_price
+    ROUND((p.price * 0.60), 2) AS wholesale_price -- what is wholesale_price?
 FROM staging_products p
 LEFT JOIN staging_categories c ON p.category_id = c.category_id
 LEFT JOIN staging_suppliers s ON p.supplier_id = s.supplier_id;
