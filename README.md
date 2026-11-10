@@ -17,3 +17,6 @@ This project models an enterprise retail data warehouse in PostgreSQL using Kimb
 * `data_modeling/`: DDL scripts for Star Schema tables
 * `etl_pipeline/`: Data cleaning and transformation queries
 * `sql_analytics/`: Advanced analytical queries (RFM segmentation, rolling growth metrics)
+
+## ERD of the Star Schema
+![alt text](.gitignore/star_schema.png.png)
