@@ -19,4 +19,4 @@ This project models an enterprise retail data warehouse in PostgreSQL using Kimb
 * `sql_analytics/`: Advanced analytical queries (RFM segmentation, rolling growth metrics)
 
 ## ERD of the Star Schema
-![alt text](.gitignore/star_schema.png.png)
+![alt text](ERD/star_schema.png.png)
